@@ -1,0 +1,16 @@
+O:\esae\UD\UD\obj\Debug\net7.0-windows\UD.Form1.resources
+O:\esae\UD\UD\obj\Debug\net7.0-windows\UD.vbproj.GenerateResource.cache
+O:\esae\UD\UD\obj\Debug\net7.0-windows\UD.GeneratedMSBuildEditorConfig.editorconfig
+O:\esae\UD\UD\obj\Debug\net7.0-windows\UD.AssemblyInfoInputs.cache
+O:\esae\UD\UD\obj\Debug\net7.0-windows\UD.AssemblyInfo.vb
+O:\esae\UD\UD\obj\Debug\net7.0-windows\UD.vbproj.CoreCompileInputs.cache
+O:\esae\UD\UD\bin\Debug\net7.0-windows\UD.exe
+O:\esae\UD\UD\bin\Debug\net7.0-windows\UD.deps.json
+O:\esae\UD\UD\bin\Debug\net7.0-windows\UD.runtimeconfig.json
+O:\esae\UD\UD\bin\Debug\net7.0-windows\UD.dll
+O:\esae\UD\UD\bin\Debug\net7.0-windows\UD.pdb
+O:\esae\UD\UD\obj\Debug\net7.0-windows\UD.dll
+O:\esae\UD\UD\obj\Debug\net7.0-windows\refint\UD.dll
+O:\esae\UD\UD\obj\Debug\net7.0-windows\UD.pdb
+O:\esae\UD\UD\obj\Debug\net7.0-windows\UD.genruntimeconfig.cache
+O:\esae\UD\UD\obj\Debug\net7.0-windows\ref\UD.dll
