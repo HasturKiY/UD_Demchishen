@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "O:\\esae\\UD\\UD\\UD.vbproj",
+      "projectUniqueName": "O:\\UD_Demchishen\\UD\\UD\\UD.vbproj",
       "projectName": "UD",
-      "projectPath": "O:\\esae\\UD\\UD\\UD.vbproj",
+      "projectPath": "O:\\UD_Demchishen\\UD\\UD\\UD.vbproj",
       "packagesPath": "C:\\Users\\Иванес\\.nuget\\packages\\",
-      "outputPath": "O:\\esae\\UD\\UD\\obj\\",
+      "outputPath": "O:\\UD_Demchishen\\UD\\UD\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Иванес\\AppData\\Roaming\\NuGet\\NuGet.Config"
