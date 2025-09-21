@@ -1,0 +1,11 @@
+D:\repos\UD\UD\bin\Debug\UD.exe.config
+D:\repos\UD\UD\bin\Debug\UD.exe
+D:\repos\UD\UD\bin\Debug\UD.pdb
+D:\repos\UD\UD\obj\Debug\UD.csproj.AssemblyReference.cache
+D:\repos\UD\UD\obj\Debug\UD.Form1.resources
+D:\repos\UD\UD\obj\Debug\UD.Properties.Resources.resources
+D:\repos\UD\UD\obj\Debug\UD.csproj.GenerateResource.cache
+D:\repos\UD\UD\obj\Debug\UD.csproj.CoreCompileInputs.cache
+D:\repos\UD\UD\obj\Debug\UD.exe
+D:\repos\UD\UD\obj\Debug\UD.pdb
+D:\repos\UD\UD\obj\Debug\UD.exe.config
