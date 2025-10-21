@@ -17,9 +17,18 @@ namespace UD
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            AddForm af = new AddForm();
+            af.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AdminForm admin = new AdminForm();
+            admin.Show();
         }
     }
 }

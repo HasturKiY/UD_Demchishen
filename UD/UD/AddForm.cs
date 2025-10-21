@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,59 @@ namespace UD
 {
     public partial class AddForm : Form
     {
+        static SQLiteConnection connection;
+        static SQLiteCommand command;
         public AddForm()
         {
             InitializeComponent();
+            try
+            {
+                int lel;
+                connection = new SQLiteConnection("Data Source=Library.sqlite;Version=3; FailIfMissing=False");
+                connection.Open();
+                command = new SQLiteCommand(connection);
+                
+            }
+            catch (SQLiteException ex)
+            {
+                InfoBox.Text = "Ошибка: "+ex;
+            }
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab==tabPage1)
+            {
+                if (textBox1.Text.Length > 0)
+                {
+                    command.CommandText = "INSERT INTO Writer (WriterFIO) VALUES ('" + textBox1.Text.ToString() + "')";
+                    DataTable data = new DataTable();
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
+                    adapter.Fill(data);
+                    InfoBox.Text = "Данные успешно добавлены";
+                }
+            }
+        }
+
+        private void AddForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void InfoBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
