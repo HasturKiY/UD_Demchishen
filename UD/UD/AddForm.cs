@@ -40,11 +40,22 @@ namespace UD
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedTab==tabPage1)
+            if (tabControl1.SelectedTab == tabPage1)
             {
                 if (textBox1.Text.Length > 0)
                 {
                     command.CommandText = "INSERT INTO Writer (WriterFIO) VALUES ('" + textBox1.Text.ToString() + "')";
+                    DataTable data = new DataTable();
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
+                    adapter.Fill(data);
+                    InfoBox.Text = "Данные успешно добавлены";
+                }
+            }
+            else if (tabControl1.SelectedTab == tabPage2)
+            {
+                if (textBox2.Text.Length > 0 && textBox3.Text.Length > 0)
+                {
+                    command.CommandText = "INSERT INTO Genres (GenreName, GenreInfo) VALUES ('" + textBox2.Text.ToString() + "','"+ textBox3.Text.ToString() +"')";
                     DataTable data = new DataTable();
                     SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
                     adapter.Fill(data);
@@ -64,6 +75,46 @@ namespace UD
         }
 
         private void InfoBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }
