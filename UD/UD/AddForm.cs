@@ -20,7 +20,6 @@ namespace UD
             InitializeComponent();
             try
             {
-                int lel;
                 connection = new SQLiteConnection("Data Source=Library.sqlite;Version=3; FailIfMissing=False");
                 connection.Open();
                 command = new SQLiteCommand(connection);
@@ -30,7 +29,15 @@ namespace UD
             {
                 InfoBox.Text = "Ошибка: "+ex;
             }
-            
+            command.CommandText = "SELECT * FROM Genres";
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    comboBox1.Items.Add(Convert.ToString(reader["GenresID"]));
+                    
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,27 +47,33 @@ namespace UD
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedTab == tabPage1)
+            try
             {
-                if (textBox1.Text.Length > 0)
+                if (tabControl1.SelectedTab == tabPage1)
                 {
-                    command.CommandText = "INSERT INTO Writer (WriterFIO) VALUES ('" + textBox1.Text.ToString() + "')";
-                    DataTable data = new DataTable();
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
-                    adapter.Fill(data);
-                    InfoBox.Text = "Данные успешно добавлены";
+                    if (textBox1.Text.Length > 0)
+                    {
+                        command.CommandText = "INSERT INTO Writer (WriterFIO) VALUES ('" + textBox1.Text.ToString() + "')";
+                        DataTable data = new DataTable();
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
+                        adapter.Fill(data);
+                        InfoBox.Text = "Данные успешно добавлены";
+                    }
+                }
+                else if (tabControl1.SelectedTab == tabPage2)
+                {
+                    if (textBox2.Text.Length > 0 && textBox3.Text.Length > 0)
+                    {
+                        command.CommandText = "INSERT INTO Genres (GenreName, GenreInfo) VALUES ('" + textBox2.Text.ToString() + "','" + textBox3.Text.ToString() + "')";
+                        DataTable data = new DataTable();
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
+                        adapter.Fill(data);
+                        InfoBox.Text = "Данные успешно добавлены";
+                    }
                 }
             }
-            else if (tabControl1.SelectedTab == tabPage2)
+            catch (Exception ex)
             {
-                if (textBox2.Text.Length > 0 && textBox3.Text.Length > 0)
-                {
-                    command.CommandText = "INSERT INTO Genres (GenreName, GenreInfo) VALUES ('" + textBox2.Text.ToString() + "','"+ textBox3.Text.ToString() +"')";
-                    DataTable data = new DataTable();
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
-                    adapter.Fill(data);
-                    InfoBox.Text = "Данные успешно добавлены";
-                }
             }
         }
 
@@ -115,6 +128,11 @@ namespace UD
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
 
         }
