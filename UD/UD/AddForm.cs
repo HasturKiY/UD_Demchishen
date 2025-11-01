@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,8 +35,44 @@ namespace UD
             {
                 while (reader.Read())
                 {
-                    comboBox1.Items.Add(Convert.ToString(reader["GenresID"]));
+                    comboBox1.Items.Add(Convert.ToString(reader["GenreName"]));
                     
+                }
+            }
+            command.CommandText = "SELECT * FROM Writer";
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    comboBox2.Items.Add(Convert.ToString(reader["WriterFIO"]));
+
+                }
+            }
+            command.CommandText = "SELECT * FROM Books";
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    comboBox5.Items.Add(Convert.ToString(reader["BookName"]));
+
+                }
+            }
+            command.CommandText = "SELECT * FROM Reader";
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    comboBox4.Items.Add(Convert.ToString(reader["ReaderFIO"]));
+
+                }
+            }
+            command.CommandText = "SELECT * FROM Employer";
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    comboBox6.Items.Add(Convert.ToString(reader["EmplFIO"]));
+
                 }
             }
         }
@@ -47,6 +84,7 @@ namespace UD
 
         private void button4_Click(object sender, EventArgs e)
         {
+            DateTime dtime, dtime2;
             try
             {
                 if (tabControl1.SelectedTab == tabPage1)
@@ -70,71 +108,68 @@ namespace UD
                         adapter.Fill(data);
                         InfoBox.Text = "Данные успешно добавлены";
                     }
+                }else if(tabControl1.SelectedTab == tabPage3)
+                {
+                    if (textBox4.Text.Length > 0 && textBox7.Text.Length > 0 && comboBox1.Text.Length>0 && comboBox2.Text.Length > 0)
+                    {
+                        command.CommandText = "INSERT INTO Books (BookName, IdGenre, IdWriter, WriteDate, PublishDate, Publisher, Pages, BooksNum, BookInfo, AgeLimit) VALUES ('" + textBox4.Text.ToString() + "', (SELECT GenresID FROM Genres WHERE GenreName='" + comboBox1.Text.ToString() + "'),(SELECT WriterId FROM Writer WHERE WriterFIO='"+comboBox2.Text.ToString()+ "'),'" + textBox5.Text.ToString() + "','"+ textBox6.Text.ToString() + "','"+ textBox7.Text.ToString() + "','"+ textBox8.Text.ToString() + "','"+ textBox9.Text.ToString() + "','"+ textBox11.Text.ToString() + "','"+comboBox7.Text.ToString()+"')";
+                        DataTable data = new DataTable();
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
+                        adapter.Fill(data);
+                        InfoBox.Text = "Данные успешно добавлены";
+                    }
+                }
+                else if (tabControl1.SelectedTab == tabPage4)
+                {
+                    if (textBox12.Text.Length > 0 && textBox13.Text.Length > 0)
+                    {
+                        if (DateTime.TryParse(textBox13.Text, out dtime))
+                        {
+                            command.CommandText = "INSERT INTO Employer (EmplFIO, EmplDateOfBirth) VALUES ('" + textBox12.Text.ToString() + "','" + dtime + "')";
+                            DataTable data = new DataTable();
+                            SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
+                            adapter.Fill(data);
+                            InfoBox.Text = "Данные успешно добавлены";
+                        }
+                    }
+                }
+                else if (tabControl1.SelectedTab == tabPage5)
+                {
+                    if (textBox15.Text.Length > 0 && textBox14.Text.Length > 0)
+                    {
+                        if (DateTime.TryParse(textBox14.Text, out dtime))
+                        {
+                            command.CommandText = "INSERT INTO Reader (ReaderFIO, ReaderDateOfBirth, ReadTicket) VALUES ('" + textBox15.Text.ToString() + "','" + dtime + "','" + (checkBox1.Checked ? "1" : "0") + "')";
+                            DataTable data = new DataTable();
+                            SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
+                            adapter.Fill(data);
+                            InfoBox.Text = "Данные успешно добавлены";
+                        }
+                    }
+                }
+                else if (tabControl1.SelectedTab == tabPage6)
+                {
+                    if (textBox21.Text.Length > 0 && comboBox5.Text.Length > 0 && comboBox3.Text.Length > 0 && comboBox4.Text.Length > 0 && comboBox6.Text.Length > 0)
+                    {
+                        if (DateTime.TryParse(textBox21.Text, out dtime) && DateTime.TryParse(textBox20.Text, out dtime2)) {
+                            command.CommandText = "INSERT INTO Extradition (IDBook, DateOut, DateIn, BookState, IdEmployer, ReaderT) VALUES ((SELECT BookID FROM Books WHERE BookName='" + comboBox5.Text.ToString() + "','" + dtime + "','" + dtime2 + "','" + comboBox3.Text.ToString() + "',(SELECT EmplID FROM Employer WHERE EmplFIO = '" + comboBox6.Text + "'), (SELECT ReaderID FROM Reader WHERE ReaderFIO = '" + comboBox4.Text+"'))";
+                            DataTable data = new DataTable();
+                            SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
+                            adapter.Fill(data);
+                            InfoBox.Text = "Данные успешно добавлены";
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
+                InfoBox.Text = "Данные не добавлены: "+ex.Message;
             }
         }
 
-        private void AddForm_Load(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void InfoBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox10_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
         }
     }
 }

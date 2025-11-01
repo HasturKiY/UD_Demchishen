@@ -30,5 +30,11 @@ namespace UD
             DeepForm admin = new DeepForm();
             admin.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DelTakeForm dlf = new DelTakeForm();
+            dlf.Show();
+        }
     }
 }

@@ -64,6 +64,12 @@
     <Compile Include="DeepForm.Designer.cs">
       <DependentUpon>DeepForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DelTakeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelTakeForm.Designer.cs">
+      <DependentUpon>DelTakeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeepForm.resx">
       <DependentUpon>DeepForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelTakeForm.resx">
+      <DependentUpon>DelTakeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

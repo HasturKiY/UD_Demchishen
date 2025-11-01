@@ -89,6 +89,8 @@ namespace UD
             try
             {
                 adapter.Fill(data);
+                dt.Clear();
+                dt.Load(command.ExecuteReader());
             }
             catch (Exception ex)
             {

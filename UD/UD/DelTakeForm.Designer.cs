@@ -1,6 +1,6 @@
 ﻿namespace UD
 {
-    partial class AddForm
+    partial class DelTakeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,9 +31,13 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -83,9 +87,12 @@
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.InfoBox = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -97,7 +104,6 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -105,6 +111,7 @@
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
@@ -112,11 +119,14 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.label25);
+            this.splitContainer1.Panel2.Controls.Add(this.button5);
             this.splitContainer1.Panel2.Controls.Add(this.button4);
-            this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(20);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 619;
+            this.splitContainer1.Panel2.Controls.Add(this.button3);
+            this.splitContainer1.Panel2.Controls.Add(this.button2);
+            this.splitContainer1.Panel2.Controls.Add(this.button1);
+            this.splitContainer1.Size = new System.Drawing.Size(618, 450);
+            this.splitContainer1.SplitterDistance = 371;
             this.splitContainer1.TabIndex = 0;
             // 
             // tabControl1
@@ -131,26 +141,50 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(619, 450);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(618, 371);
+            this.tabControl1.TabIndex = 1;
+            this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting);
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox10);
+            this.tabPage1.Controls.Add(this.label20);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(611, 421);
+            this.tabPage1.Size = new System.Drawing.Size(610, 342);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Авторы";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // textBox10
+            // 
+            this.textBox10.Enabled = false;
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.textBox10.Location = new System.Drawing.Point(171, 15);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(153, 32);
+            this.textBox10.TabIndex = 3;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label20.Location = new System.Drawing.Point(12, 18);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(34, 26);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "ID";
+            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.textBox1.Location = new System.Drawing.Point(167, 13);
+            this.textBox1.Location = new System.Drawing.Point(171, 65);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(417, 32);
             this.textBox1.TabIndex = 1;
             // 
@@ -158,14 +192,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label1.Location = new System.Drawing.Point(8, 16);
+            this.label1.Location = new System.Drawing.Point(12, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 26);
+            this.label1.Size = new System.Drawing.Size(73, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ФИО Автора";
+            this.label1.Text = "Автор";
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textBox16);
+            this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.textBox3);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.textBox2);
@@ -173,25 +209,46 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(611, 421);
+            this.tabPage2.Size = new System.Drawing.Size(610, 342);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Жанры";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // textBox16
+            // 
+            this.textBox16.Enabled = false;
+            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.textBox16.Location = new System.Drawing.Point(235, 20);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.ReadOnly = true;
+            this.textBox16.Size = new System.Drawing.Size(153, 32);
+            this.textBox16.TabIndex = 7;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label21.Location = new System.Drawing.Point(8, 20);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(34, 26);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "ID";
+            // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.textBox3.Location = new System.Drawing.Point(235, 76);
+            this.textBox3.Location = new System.Drawing.Point(235, 124);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(354, 259);
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(354, 211);
             this.textBox3.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label3.Location = new System.Drawing.Point(8, 79);
+            this.label3.Location = new System.Drawing.Point(6, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 26);
             this.label3.TabIndex = 4;
@@ -200,8 +257,9 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.textBox2.Location = new System.Drawing.Point(235, 22);
+            this.textBox2.Location = new System.Drawing.Point(235, 70);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(354, 32);
             this.textBox2.TabIndex = 3;
             // 
@@ -209,7 +267,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label2.Location = new System.Drawing.Point(8, 25);
+            this.label2.Location = new System.Drawing.Point(8, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(181, 26);
             this.label2.TabIndex = 2;
@@ -240,7 +298,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(611, 421);
+            this.tabPage3.Size = new System.Drawing.Size(610, 342);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Книги";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -403,7 +461,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(200, 24);
             this.comboBox1.TabIndex = 7;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -442,7 +499,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(611, 421);
+            this.tabPage4.Size = new System.Drawing.Size(610, 342);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Сотрудники";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -493,7 +550,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(611, 421);
+            this.tabPage5.Size = new System.Drawing.Size(610, 342);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Читатели";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -563,7 +620,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(611, 421);
+            this.tabPage6.Size = new System.Drawing.Size(610, 342);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Выдача";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -684,49 +741,79 @@
             this.label26.TabIndex = 22;
             this.label26.Text = "Выдаваемая книга";
             // 
-            // groupBox1
+            // button5
             // 
-            this.groupBox1.Controls.Add(this.InfoBox);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(20, 20);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(137, 375);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            // 
-            // InfoBox
-            // 
-            this.InfoBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InfoBox.Enabled = false;
-            this.InfoBox.Location = new System.Drawing.Point(3, 18);
-            this.InfoBox.Multiline = true;
-            this.InfoBox.Name = "InfoBox";
-            this.InfoBox.ReadOnly = true;
-            this.InfoBox.Size = new System.Drawing.Size(131, 354);
-            this.InfoBox.TabIndex = 0;
+            this.button5.BackColor = System.Drawing.Color.Red;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(491, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(127, 75);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Удалить запись";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button4.Location = new System.Drawing.Point(20, 395);
+            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button4.Location = new System.Drawing.Point(225, 0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(137, 35);
+            this.button4.Size = new System.Drawing.Size(75, 75);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Добавить ";
+            this.button4.Text = "Конец";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // AddForm
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button3.Location = new System.Drawing.Point(150, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 75);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Далее";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button2.Location = new System.Drawing.Point(75, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 75);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Назад";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 75);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Начало";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(369, 29);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(0, 16);
+            this.label25.TabIndex = 4;
+            // 
+            // DelTakeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(618, 450);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "AddForm";
-            this.Text = "Добавление данных";
+            this.Name = "DelTakeForm";
+            this.Text = "DelTakeForm";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -742,8 +829,6 @@
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -751,28 +836,26 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox InfoBox;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label11;
@@ -784,17 +867,24 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox comboBox4;
@@ -807,6 +897,8 @@
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label25;
     }
 }
