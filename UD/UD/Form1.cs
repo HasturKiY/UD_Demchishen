@@ -27,8 +27,8 @@ namespace UD
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DeepForm admin = new DeepForm();
-            admin.Show();
+            AuthForm auth = new AuthForm();
+            auth.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

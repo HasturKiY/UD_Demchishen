@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\UD2\\UD_Demchishen\\UD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|d:\\ud2\\ud_demchishen\\ud\\ud\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|solutionrelative:ud\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|d:\\ud2\\ud_demchishen\\ud\\ud\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|solutionrelative:ud\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|d:\\ud2\\ud_demchishen\\ud\\ud\\deltakeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|solutionrelative:ud\\deltakeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|D:\\UD2\\UD_Demchishen\\UD\\ud\\deltakeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|solutionrelative:ud\\deltakeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|D:\\UD2\\UD_Demchishen\\UD\\ud\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|solutionrelative:ud\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|d:\\ud2\\ud_demchishen\\ud\\ud\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|solutionrelative:ud\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,39 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DelTakeForm.cs",
-              "DocumentMoniker": "D:\\UD2\\UD_Demchishen\\UD\\UD\\DelTakeForm.cs",
-              "RelativeDocumentMoniker": "UD\\DelTakeForm.cs",
-              "ToolTip": "D:\\UD2\\UD_Demchishen\\UD\\UD\\DelTakeForm.cs",
-              "RelativeToolTip": "UD\\DelTakeForm.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAIwIAAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T15:55:40.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DelTakeForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\UD2\\UD_Demchishen\\UD\\UD\\DelTakeForm.cs",
-              "RelativeDocumentMoniker": "UD\\DelTakeForm.cs",
-              "ToolTip": "D:\\UD2\\UD_Demchishen\\UD\\UD\\DelTakeForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "UD\\DelTakeForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T21:09:28.188Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "AddForm.cs",
               "DocumentMoniker": "D:\\UD2\\UD_Demchishen\\UD\\UD\\AddForm.cs",
               "RelativeDocumentMoniker": "UD\\AddForm.cs",
               "ToolTip": "D:\\UD2\\UD_Demchishen\\UD\\UD\\AddForm.cs",
               "RelativeToolTip": "UD\\AddForm.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAYwF8AAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAlwF8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T09:45:05.707Z",
+              "WhenOpened": "2025-11-04T15:18:42.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\UD2\\UD_Demchishen\\UD\\UD\\AddForm.cs",
+              "RelativeDocumentMoniker": "UD\\AddForm.cs",
+              "ToolTip": "D:\\UD2\\UD_Demchishen\\UD\\UD\\AddForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "UD\\AddForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T15:16:56.306Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\UD2\\UD_Demchishen\\UD\\UD\\Form1.cs",
+              "RelativeDocumentMoniker": "UD\\Form1.cs",
+              "ToolTip": "D:\\UD2\\UD_Demchishen\\UD\\UD\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "UD\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T14:57:34.981Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DelTakeForm.cs",
+              "DocumentMoniker": "D:\\UD2\\UD_Demchishen\\UD\\UD\\DelTakeForm.cs",
+              "RelativeDocumentMoniker": "UD\\DelTakeForm.cs",
+              "ToolTip": "D:\\UD2\\UD_Demchishen\\UD\\UD\\DelTakeForm.cs",
+              "RelativeToolTip": "UD\\DelTakeForm.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAASwLYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T15:55:40.264Z",
               "EditorCaption": ""
             }
           ]

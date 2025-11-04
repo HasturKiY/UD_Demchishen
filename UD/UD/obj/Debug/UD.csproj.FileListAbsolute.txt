@@ -26,3 +26,4 @@ D:\UD2\UD_Demchishen\UD\UD\bin\Debug\System.Data.SQLite.xml
 D:\UD2\UD_Demchishen\UD\UD\obj\Debug\UD.csproj.Up2Date
 D:\UD2\UD_Demchishen\UD\UD\obj\Debug\UD.DeepForm.resources
 D:\UD2\UD_Demchishen\UD\UD\obj\Debug\UD.DelTakeForm.resources
+D:\UD2\UD_Demchishen\UD\UD\obj\Debug\UD.AuthForm.resources

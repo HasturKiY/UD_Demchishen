@@ -54,6 +54,7 @@ namespace UD
                 dataGridView1.DataSource = dt;
                 
             }
+            
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
@@ -74,6 +75,7 @@ namespace UD
                 case 5:
                     command.CommandText = "SELECT * FROM Extradition";
                     break;
+                
                 default:
                     break;
                 }
@@ -94,6 +96,16 @@ namespace UD
             }
             catch (Exception ex)
             {
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                dt = new DataTable();
+                dataGridView1.DataSource = dt;
 
             }
         }
