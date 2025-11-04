@@ -133,9 +133,9 @@ namespace UD
             if (tabControl1.SelectedTab == tabPage1){command.CommandText = "DELETE FROM Writer WHERE WriterId = ('" + list[listind] + "')";}
             else if (tabControl1.SelectedTab == tabPage2) {command.CommandText = "DELETE FROM Genres WHERE GenresID = ('" + list[listind] + "')"; }
             else if (tabControl1.SelectedTab == tabPage3) {command.CommandText = "DELETE FROM Books WHERE BookID = ('" + list[listind] + "')"; }
-            else if (tabControl1.SelectedTab == tabPage4) {command.CommandText = "DELETE FROM Writer WHERE WriterId = ('" + list[listind] + "')"; }
-            else if (tabControl1.SelectedTab == tabPage5) {command.CommandText = "DELETE FROM Writer WHERE WriterId = ('" + list[listind] + "')"; }
-            else if (tabControl1.SelectedTab == tabPage6) {command.CommandText = "DELETE FROM Writer WHERE WriterId = ('" + list[listind] + "')"; }
+            else if (tabControl1.SelectedTab == tabPage4) {command.CommandText = "DELETE FROM Employer WHERE EmplID = ('" + list[listind] + "')"; }
+            else if (tabControl1.SelectedTab == tabPage5) {command.CommandText = "DELETE FROM Reader WHERE ReaderID = ('" + list[listind] + "')"; }
+            else if (tabControl1.SelectedTab == tabPage6) {command.CommandText = "DELETE FROM Extradition WHERE IDExtr = ('" + list[listind] + "')"; }
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
             command.ExecuteNonQuery();
         }
