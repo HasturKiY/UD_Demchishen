@@ -105,12 +105,12 @@ namespace UD
                 }
             }
             else if (tabControl1.SelectedTab == tabPage6) {
-                command.CommandText = "SELECT * FROM Reader";
+                command.CommandText = "SELECT * FROM Extradition";
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        list.Add(Convert.ToString(reader["ReaderID"]));
+                        list.Add(Convert.ToString(reader["IDExtr"]));
                         numlist++;
                     }
                 }

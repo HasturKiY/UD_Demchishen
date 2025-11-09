@@ -47,7 +47,7 @@ namespace UD
                     if (textBox1.Text.Length > 0)
                     {
                         command.CommandText = "INSERT INTO Writer (WriterFIO) VALUES ('" + textBox1.Text.ToString() + "')";
-                        
+                        InfoBox.Text = "Данные успешно добавлены";
                     }
                 }
                 else if (tabControl1.SelectedTab == tabPage2)
@@ -55,14 +55,14 @@ namespace UD
                     if (textBox2.Text.Length > 0 && textBox3.Text.Length > 0)
                     {
                         command.CommandText = "INSERT INTO Genres (GenreName, GenreInfo) VALUES ('" + textBox2.Text.ToString() + "','" + textBox3.Text.ToString() + "')";
-                        
+                        InfoBox.Text = "Данные успешно добавлены";
                     }
                 }else if(tabControl1.SelectedTab == tabPage3)
                 {
                     if (textBox4.Text.Length > 0 && textBox7.Text.Length > 0 && comboBox1.Text.Length>0 && comboBox2.Text.Length > 0)
                     {
                         command.CommandText = "INSERT INTO Books (BookName, IdGenre, IdWriter, WriteDate, PublishDate, Publisher, Pages, BooksNum, BookInfo, AgeLimit) VALUES ('" + textBox4.Text.ToString() + "', (SELECT GenresID FROM Genres WHERE GenreName='" + comboBox1.Text.ToString() + "'),(SELECT WriterId FROM Writer WHERE WriterFIO='"+comboBox2.Text.ToString()+ "'),'" + textBox5.Text.ToString() + "','"+ textBox6.Text.ToString() + "','"+ textBox7.Text.ToString() + "','"+ textBox8.Text.ToString() + "','"+ textBox9.Text.ToString() + "','"+ textBox11.Text.ToString() + "','"+comboBox7.Text.ToString()+"')";
-                        
+                        InfoBox.Text = "Данные успешно добавлены";
                     }
                 }
                 else if (tabControl1.SelectedTab == tabPage4)
@@ -70,7 +70,7 @@ namespace UD
                     if (textBox12.Text.Length > 0 && textBox13.Text.Length > 0)
                     {
                             command.CommandText = "INSERT INTO Employer (EmplFIO, EmplDateOfBirth) VALUES ('" + textBox12.Text.ToString() + "','" + textBox13.Text.ToString() + "')";
-                            
+                        InfoBox.Text = "Данные успешно добавлены";
                     }
                 }
                 else if (tabControl1.SelectedTab == tabPage5)
@@ -79,7 +79,7 @@ namespace UD
                     {
                         
                             command.CommandText = "INSERT INTO Reader (ReaderFIO, ReaderDateOfBirth, ReadTicket) VALUES ('" + textBox15.Text.ToString() + "','" + textBox14.Text.ToString() + "','" + (checkBox1.Checked ? "1" : "0") + "')";
-                            
+                        InfoBox.Text = "Данные успешно добавлены";
                     }
                 }
                 else if (tabControl1.SelectedTab == tabPage6)
@@ -88,7 +88,7 @@ namespace UD
                     {
                         
                             command.CommandText = "INSERT INTO Extradition (IDBook, DateOut, DateIn, BookState, IdEmployer, ReaderT) VALUES ((SELECT BookID FROM Books WHERE BookName='" + comboBox5.Text.ToString() + "'),'" + textBox21.Text.ToString() + "','" + textBox20.Text.ToString() + "','" + comboBox3.Text.ToString() + "',(SELECT EmplID FROM Employer WHERE EmplFIO = '" + comboBox6.Text + "'), (SELECT ReaderID FROM Reader WHERE ReaderFIO = '" + comboBox4.Text+"'))";
-                            
+                        InfoBox.Text = "Данные успешно добавлены";
                     }
                 }
                 DataTable data = new DataTable();

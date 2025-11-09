@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\UD2\\UD_Demchishen\\UD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|D:\\UD2\\UD_Demchishen\\UD\\ud\\deltakeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|d:\\ud2\\ud_demchishen\\ud\\ud\\deltakeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|solutionrelative:ud\\deltakeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|d:\\ud2\\ud_demchishen\\ud\\ud\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|D:\\UD2\\UD_Demchishen\\UD\\ud\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA423B15-FD52-403D-9057-74E5DE435115}|UD\\UD.csproj|solutionrelative:ud\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -38,8 +38,7 @@
               "RelativeToolTip": "UD\\AddForm.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAlwF8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T15:18:42.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T15:18:42.638Z"
             },
             {
               "$type": "Document",
@@ -71,7 +70,7 @@
               "RelativeDocumentMoniker": "UD\\DelTakeForm.cs",
               "ToolTip": "D:\\UD2\\UD_Demchishen\\UD\\UD\\DelTakeForm.cs",
               "RelativeToolTip": "UD\\DelTakeForm.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAvwIcAAABzAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAjwHAAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-01T15:55:40.264Z",
               "EditorCaption": ""
